@@ -1,0 +1,156 @@
+:root {
+    --main-light-color: #FFFFFF;
+    --main-font-color: #434455;
+    --secondory-font-color: #2E2F42;
+    --secondory-footer-color: #F4F4FD;
+    --secondory-font-accent-color: #4D5AE5;
+
+}
+
+
+
+/* посиланням добавлено значення щоб прибирати підкрєслювання */
+.link {
+    text-decoration: none;
+}
+
+
+/* списку добавлено значення щоб прибирати крапки */
+.list {
+    list-style: none;
+}
+
+/* логотипу добавленний селекто span з класом для стилізації частини тексту */
+.header-logo {
+    color: var(--secondory-font-color);
+}
+
+.footer-logo {
+    color: #f4f4fd;
+}
+
+.logotyp {
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    color: var(--secondory-font-accent-color);
+    text-decoration: none;
+}
+
+.header-item {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--secondory-font-color);
+}
+
+.header-item:hover,
+.header-item:focus {
+    color: #404bbf;
+}
+
+.header-contact:hover,
+.header-contact:focus {
+    color: #404bbf;
+}
+
+.address {
+    font-style: normal;
+}
+
+
+.header-contact {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--main-font-color);
+
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    color: #434455;
+    background-color: var(--main-light-color);
+}
+
+.section-hero {
+    background-color: var(--secondory-font-color);
+}
+
+.title-hero {
+    text-align: center;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    color: var(--main-light-color);
+}
+
+.btn-hero {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+    background-color: #4D5AE5;
+    cursor: pointer;
+}
+
+.btn-hero:hover,
+.btn-hero:focus {
+    background-color: #404BBF;
+}
+
+.title-advantages,
+.subtitle-team {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--secondory-font-color);
+}
+
+.text,
+.text-team {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--main-font-color);
+}
+
+.title-doing,
+.title-team {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    color: var(--secondory-font-color);
+}
+
+.section-team {
+    background-color: #F4F4FD
+}
+
+.item-team {
+    background-color: #FFFFFF
+}
+
+.text-footer {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--secondory-footer-color);
+}
+
+.footer {
+    background-color: var(--secondory-font-color);
+
+}

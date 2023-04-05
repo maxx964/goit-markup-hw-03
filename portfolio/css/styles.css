@@ -1,0 +1,122 @@
+:root {
+    --main-light-color: #FFFFFF;
+    --main-font-color: #434455;
+    --secondory-font-color: #2E2F42;
+    --secondory-footer-color: #F4F4FD;
+    --secondory-font-accent-color: #4D5AE5;
+
+}
+
+.link {
+    text-decoration: none;
+}
+
+.list {
+    list-style: none;
+}
+
+.header-logo {
+    color: var(--secondory-font-color);
+}
+
+.footer-logo {
+    color: #f4f4fd;
+}
+
+.logotyp {
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    color: var(--secondory-font-accent-color);
+    text-decoration: none
+}
+
+.header-item {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--secondory-font-color);
+}
+
+.header-item:hover,
+.header-item:focus {
+    color: #404bbf;
+}
+
+.header-contact:hover,
+.header-contact:focus {
+    color: #404bbf;
+}
+
+.address {
+    font-style: normal
+}
+
+
+.header-contact {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--main-font-color);
+
+}
+
+.btn-product {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    background-color: #F4F4FD;
+    color: var(--secondory-font-accent-color);
+    cursor: pointer;
+}
+
+.btn-product:hover,
+.btn-product:focus {
+    color: #FFFFFF;
+    background-color: #404BBF;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    color: #434455;
+    background-color: var(--main-light-color);
+}
+
+.title-product {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--secondory-font-color);
+}
+
+.text-product {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--main-font-color)
+}
+
+
+
+
+.footer {
+    background-color: #2E2F42;
+}
+
+.text-footer {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--secondory-footer-color);
+}
