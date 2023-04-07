@@ -41,18 +41,14 @@ p {
      задає йому відступи з ліва і права
     тим самим центруючи його посередирі  */
     margin: 0 auto;
-    /* padding-left: 15px;
-    padding-right: 15px; */
 
 }
 
-.container-header {
-    padding-left: 15px;
-    padding-right: 15px;
+
+
+.nav-header {
     display: flex;
     align-items: center;
-
-
 }
 
 /*  посиланням (a) добавлено значення щоб прибирати підкрєслювання яке встановлене
@@ -103,12 +99,12 @@ img {
  стали в один рядок
 а потім align-items: center; щоб їх центрувати по горизонтальній осі */
 .nav-header {
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
 
     /* розтавляє елементи  в ліво в право верх чи низ залежить від того яке значення 
     йому вибрати */
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
 
 }
 
@@ -117,7 +113,7 @@ img {
  поставити два класи разом бо у адреса інші параментри марджину */
 .list-nav,
 .list-address {
-    display: flex;
+    /* display: flex; */
     /* margin: 0 auto; 
     /* outline: 1px solid green; */
 
@@ -126,7 +122,7 @@ img {
 /* зробили блочним але без inline-block,а просто block для того щоб уникнути падінгу к 4пікселя який є по замовчуванні 
 у  єлементів списка */
 .item {
-    display: block;
+    /* display: block; */
     /* outline: 1px solid red; */
 }
 
@@ -143,10 +139,10 @@ img {
 
 /* скидання крайньої геометрії тобто марджину за допомогою :not(:last-child) у останьої дити в списку у
 всіх що перед ним марджин залишається (!крайній марджин прибираємо ЗАВЖДИ!) */
-
+/* 
 .list-nav .item:not(:last-child),
 .list-address .item:not(:last-child) {
-    margin-right: 40px;
+    margin-right: 40px; */
 }
 
 /* .list-address {
@@ -163,6 +159,16 @@ img {
     color: var(--secondory-font-color);
 }
 
+.list-nav {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    gap: 40px;
+}
+
+.header-contact {
+    margin-right: 40px;
+}
 
 
 .logotyp {
@@ -178,6 +184,8 @@ img {
     margin-right: 76px;
 }
 
+
+.header-logo,
 .header-link {
     font-weight: 500;
     font-size: 16px;
@@ -199,27 +207,15 @@ img {
 /* добавлений падинг в горі та в низу елемента для кращого наведення мишкою 
 для режиму cursor */
 .header-contact {
-    /* background-color: red; */
     padding-top: 24px;
     padding-bottom: 24px;
 }
 
 .address {
-    /* margin-left: auto;-аресу автоматично приміняється доступний марджин
-    що, відсунути його в право від його сусіда котрим в данному 
-    випадку є (ul) це дає змогу не використовувати додаткові div*/
     font-style: normal;
-    /* margin-left: auto; */
+
 
 }
-
-/* .list-address {
-    margin-right: 40px;
-    display: flex;
-} */
-
-
-
 
 .header-contact {
     font-family: 'Roboto';
