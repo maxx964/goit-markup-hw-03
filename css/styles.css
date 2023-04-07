@@ -311,6 +311,7 @@ button {
 }
 
 .subtitle-team {
+    margin-top: 32px;
     margin-bottom: 8px;
     font-size: 20px;
     line-height: 1.2;
@@ -363,24 +364,24 @@ button {
 .list-advantages {
     display: flex;
     gap: 24px;
-
-
 }
 
-/* .list-advantges .text:not(:last-child) {
-    margin-right: 40px;
-} */
+.item-advantages {
+    width: calc((100% - 3 * 24px) / 4);
+}
+
 
 .section-whatdoing {
+    padding-bottom: 120px;
     background-color: var(--main-light-color);
 }
 
 /* клас ul в секції what are doing */
 .list-whatdoing {
-    /* margin: 0 auto; */
+    gap: 24px;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 120px;
+
 }
 
 
@@ -395,7 +396,9 @@ button {
 
 
 .section-ourteam {
-    /* padding-bottom: 120px; */
+    padding-top: 120px;
+    padding-bottom: 120px;
+
     background-color: #F4F4FD;
     margin: 0 auto;
 }
@@ -410,13 +413,21 @@ button {
 }
 
 .item-team {
-    margin-bottom: 120px;
+
     /* outline: 1px solid green; */
     width: 264px;
     height: 380px;
     background: #FFFFFF;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
+}
+
+.div-team {
+    padding-bottom: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
 
 }
 
