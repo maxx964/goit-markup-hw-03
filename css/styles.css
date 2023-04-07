@@ -34,14 +34,18 @@ p {
 .container {
     /* outline: 1px solid green; */
     width: 1158px;
-
-
+    padding-left: 15px;
+    padding-right: 15px;
     /* центрування блокових єлементів за допомогою автоматичного
     марджину margin: 0 auto; який відносно розміру блока
      задає йому відступи з ліва і права
     тим самим центруючи його посередирі  */
     margin: 0 auto;
+}
 
+.container-header {
+    display: flex;
+    align-items: center;
 }
 
 
@@ -145,12 +149,7 @@ img {
     margin-right: 40px; */
 }
 
-/* .list-address {
-    margin-left: 0 auto;
-} */
 
-/* також значення співпадають тому пишемо два класи разом через кому щоб
-не дублювати лишній код */
 
 
 
