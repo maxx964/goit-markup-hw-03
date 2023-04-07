@@ -158,15 +158,21 @@ img {
     color: var(--secondory-font-color);
 }
 
+
 .list-nav {
     display: flex;
     align-items: center;
-    margin-right: auto;
     gap: 40px;
+
+
+}
+
+.item-header {
+    /* gap: 40px; */
 }
 
 .header-contact {
-    margin-right: 40px;
+    /* margin-right: 40px; */
 }
 
 
@@ -212,23 +218,19 @@ img {
 
 .address {
     font-style: normal;
+    margin-left: 331px;
+
 }
 
 
 .list-nav-address {
     display: flex;
-    margin-left: 331px;
-
+    gap: 40px;
 }
 
-.item-address {
-    margin-right: 40px;
+.item-address {}
 
-}
-
-.header-contact {
-    margin-right: auto;
-}
+.header-contact {}
 
 
 .list-nav .header-contact {
