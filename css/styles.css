@@ -43,10 +43,10 @@ p {
     margin: 0 auto;
 }
 
-.container-header {
+/* .container-header {
     display: flex;
     align-items: center;
-}
+} */
 
 
 
@@ -98,37 +98,7 @@ img {
 
 
 
-/* це наш загальний батьківский елемент для наших ul і логотипа тому задаємо 
-йому display: flex; для перетворювання його в флекс елемент і щоб діти-(ul та a силка логотип)
- стали в один рядок
-а потім align-items: center; щоб їх центрувати по горизонтальній осі */
-.nav-header {
-    /* display: flex;
-    align-items: center; */
 
-    /* розтавляє елементи  в ліво в право верх чи низ залежить від того яке значення 
-    йому вибрати */
-    /* justify-content: space-evenly; */
-
-}
-
-/* можна також додати лівий марджин margin-left: 77px;
- класу нашого списку ul це 2 варіант, але в такому випадку ми не зможемо
- поставити два класи разом бо у адреса інші параментри марджину */
-.list-nav,
-.list-address {
-    /* display: flex; */
-    /* margin: 0 auto; 
-    /* outline: 1px solid green; */
-
-}
-
-/* зробили блочним але без inline-block,а просто block для того щоб уникнути падінгу к 4пікселя який є по замовчуванні 
-у  єлементів списка */
-.item {
-    /* display: block; */
-    /* outline: 1px solid red; */
-}
 
 
 .header-link {
@@ -228,9 +198,6 @@ img {
     gap: 40px;
 }
 
-.item-address {}
-
-.header-contact {}
 
 
 .list-nav .header-contact {
