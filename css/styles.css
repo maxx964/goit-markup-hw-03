@@ -210,13 +210,13 @@ img {
     випадку є (ul) це дає змогу не використовувати додаткові div*/
     font-style: normal;
     /* margin-left: auto; */
-    display: flex;
+
 }
 
-.list-address {
+/* .list-address {
     margin-right: 40px;
-
-}
+    display: flex;
+} */
 
 
 
