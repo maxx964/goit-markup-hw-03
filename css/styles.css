@@ -147,7 +147,7 @@ img {
 .list-nav .item:not(:last-child),
 .list-address .item:not(:last-child) {
     margin-right: 40px; */
-}
+
 
 
 
@@ -161,7 +161,7 @@ img {
 .list-nav {
     display: flex;
     align-items: center;
-    /* margin-right: auto; */
+    margin-right: auto;
     gap: 40px;
 }
 
@@ -214,6 +214,7 @@ img {
     font-style: normal;
 }
 
+
 .list-nav-address {
     display: flex;
     margin-left: 331px;
@@ -222,6 +223,7 @@ img {
 
 .item-address {
     margin-right: 40px;
+
 }
 
 .header-contact {
@@ -249,7 +251,7 @@ img {
 
 
 .title-hero {
-    min-width: 496px;
+    max-width: 496px;
     text-align: center;
     font-weight: 600;
     font-size: 56px;
@@ -265,7 +267,7 @@ img {
 }
 
 button {
-    min-width: 169px;
+
     height: 56px;
     display: block;
     min-width: 170px;
@@ -278,7 +280,7 @@ button {
 }
 
 .btn-hero {
-
+    min-width: 169px;
     text-align: center;
     font-family: "Roboto", sans-serif;
     font-weight: 600;
@@ -300,7 +302,7 @@ button {
 
 
 .title-advantages {
-    padding-top: 120px;
+    margin-bottom: 8px;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
@@ -338,7 +340,7 @@ button {
 не дублювати лишній код */
 .title-doing,
 .title-team {
-    padding-top: 120px;
+
     margin-bottom: 72px;
     text-align: center;
     text-transform: capitalize;
@@ -352,12 +354,15 @@ button {
 
 
 .section-advantages {
+    padding-top: 120px;
+    padding-bottom: 120px;
     background-color: var(--main-light-color);
 
 }
 
 .list-advantages {
     display: flex;
+    gap: 24px;
 
 
 }
@@ -379,9 +384,10 @@ button {
 }
 
 
-.list-whatdoing .item-whatdoing:not(:last-child) {
-    margin-right: 24px;
+.item-whatdoing {
+    width: calc ((100% - 3 * 24px) / 4);
 }
+
 
 .list-ourteam .item-team:not(:last-child) {
     margin-right: 24px;
