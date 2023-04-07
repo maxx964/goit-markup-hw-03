@@ -212,11 +212,17 @@ img {
 
 .address {
     font-style: normal;
-
-
 }
 
-.header-contact {
+.list-nav-address {
+    display: flex;
+}
+
+.item-address {
+    margin-right: 40px;
+}
+
+.list-nav .header-contact {
     font-family: 'Roboto';
     font-weight: 400;
     font-size: 16px;
