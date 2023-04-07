@@ -389,13 +389,13 @@ button {
 }
 
 
-.list-ourteam .item-team:not(:last-child) {
-    margin-right: 24px;
-
+.list-ourteam {
+    gap: 24px;
 }
 
 
 .section-ourteam {
+    /* padding-bottom: 120px; */
     background-color: #F4F4FD;
     margin: 0 auto;
 }
