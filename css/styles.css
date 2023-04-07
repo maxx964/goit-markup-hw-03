@@ -161,7 +161,7 @@ img {
 .list-nav {
     display: flex;
     align-items: center;
-    margin-right: auto;
+    /* margin-right: auto; */
     gap: 40px;
 }
 
@@ -216,11 +216,18 @@ img {
 
 .list-nav-address {
     display: flex;
+    margin-left: 331px;
+
 }
 
 .item-address {
     margin-right: 40px;
 }
+
+.header-contact {
+    margin-right: auto;
+}
+
 
 .list-nav .header-contact {
     font-family: 'Roboto';
