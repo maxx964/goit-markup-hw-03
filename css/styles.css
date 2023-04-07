@@ -7,27 +7,146 @@
 
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    color: #434455;
+    /* background-color: var(--main-light-color); */
+    /* background-color: yellowgreen; */
+}
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
 
-/* посиланням добавлено значення щоб прибирати підкрєслювання */
+.header {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.container {
+    /* outline: 1px solid green; */
+    width: 1158px;
+
+    /* центрування блокових єлементів за допомогою автоматичного
+    марджину margin: 0 auto; який відносно розміру блока
+     задає йому відступи з ліва і права
+    тим самим центруючи його посередирі  */
+    margin: 0 auto;
+    /* padding-left: 15px;
+    padding-right: 15px; */
+
+}
+
+/*  посиланням (a) добавлено значення щоб прибирати підкрєслювання яке встановлене
+за замовчуванням */
 .link {
     text-decoration: none;
+
+    /* currentColor дає змогу унаслідовання кольорів шрифту 
+    від встановленого в (body)
+     перебиває значення кольору яке виставленно при зомовчувані браузером */
+    color: currentColor;
 }
 
 
-/* списку добавлено значення щоб прибирати крапки */
+/* списку (ul) добавлено значення щоб прибирати крапки */
 .list {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
+
+/* потрібне встановленя для скидання кусочка типу
+пустого місця яке браузер встановлює за замовчуванням
+для зображень */
+img {
+    display: block;
+}
+
+/* для приховання логічного зоголовка застосовуемо .visually-hidden */
+.visually-hidden {
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    width: 1px;
+    position: absolute;
+
+}
+
+/* це наш загальний батьківский елемент для наших ul і логотипа тому задаємо 
+йому display: flex; для перетворювання його в флекс елемент і щоб діти-(ul та a силка логотип)
+ стали в один рядок
+а потім align-items: center; щоб їх центрувати по горизонтальній осі */
+.nav-header {
+    display: flex;
+    align-items: center;
+
+    /* розтавляє елементи  в ліво в право верх чи низ залежить від того яке значення 
+    йому вибрати */
+    justify-content: space-evenly;
+
+}
+
+/* можна також додати лівий марджин margin-left: 77px;
+ класу нашого списку ul це 2 варіант, але в такому випадку ми не зможемо
+ поставити два класи разом бо у адреса інші параментри марджину */
+.list-nav,
+.list-address {
+    display: flex;
+    /* margin: 0 auto; */
+    /* outline: 1px solid green; */
+
+}
+
+/* зробили блочним але без inline-block,а просто block для того щоб уникнути падінгу к 4пікселя який є по замовчуванні 
+у  єлементів списка */
+.item {
+    display: block;
+    /* outline: 1px solid red; */
+}
+
+
+.header-link {
+    display: block;
+    /* елементам (а) добавлений падинг в гору та низ для кращого наведення мишкою
+    в режимі cursor таким чином 
+    ми одразу задаємо і потрібну висоту нашому header */
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+}
+
+/* скидання крайньої геометрії тобто марджину за допомогою :not(:last-child) у останьої дити в списку у
+всіх що перед ним марджин залишається (!крайній марджин прибираємо ЗАВЖДИ!) */
+
+.list-nav .item:not(:last-child),
+.list-address .item:not(:last-child) {
+    margin-right: 40px;
+}
+
+/* також значення співпадають тому пишемо два класи разом через кому щоб
+не дублювати лишній код */
+
+
 
 /* логотипу добавленний селекто span з класом для стилізації частини тексту */
 .header-logo {
     color: var(--secondory-font-color);
 }
 
-.footer-logo {
-    color: #f4f4fd;
-}
+
 
 .logotyp {
     font-family: "Raleway", sans-serif;
@@ -38,9 +157,11 @@
     letter-spacing: 0.03em;
     color: var(--secondory-font-accent-color);
     text-decoration: none;
+    /* додали правий марджин логотипу  */
+    margin-right: 77px;
 }
 
-.header-item {
+.header-link {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -48,8 +169,8 @@
     color: var(--secondory-font-color);
 }
 
-.header-item:hover,
-.header-item:focus {
+.header-link:hover,
+.header-link:focus {
     color: #404bbf;
 }
 
@@ -58,8 +179,20 @@
     color: #404bbf;
 }
 
+/* добавлений падинг в горі та в низу елемента для кращого наведення мишкою 
+для режиму cursor */
+.header-contact {
+    /* background-color: red; */
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
 .address {
+    /* margin-left: auto;-аресу автоматично приміняється доступний марджин
+    що, відсунути його в право від його сусіда котрим в данному 
+    випадку є (ul) це дає змогу не використовувати додаткові div*/
     font-style: normal;
+    margin-left: auto;
 }
 
 
@@ -70,47 +203,64 @@
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--main-font-color);
-
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    color: #434455;
-    background-color: var(--main-light-color);
-}
 
 .section-hero {
-    background-color: var(--secondory-font-color);
+    background-color: #2E2F42;
+    text-align: center;
+
 }
 
+
 .title-hero {
+    min-width: 492px;
     text-align: center;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 56px;
     line-height: 1.07;
     letter-spacing: 0.02em;
     color: var(--main-light-color);
+    /* outline: 1px solid yellow; */
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 192px;
+    padding-bottom: 48px;
+}
+
+button {
+    min-width: 170px;
+    cursor: pointer;
+    margin-bottom: 192px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    padding: 16px 32px
 }
 
 .btn-hero {
+
+    text-align: center;
     font-family: "Roboto", sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.18;
     letter-spacing: 0.04em;
     color: #ffffff;
     background-color: #4D5AE5;
-    cursor: pointer;
+
+
 }
+
 
 .btn-hero:hover,
 .btn-hero:focus {
     background-color: #404BBF;
 }
 
-.title-advantages,
-.subtitle-team {
+
+.title-advantages {
+    padding-top: 120px;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
@@ -118,39 +268,135 @@ body {
     color: var(--secondory-font-color);
 }
 
+.subtitle-team {
+    margin-bottom: 8px;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--secondory-font-color);
+}
+
+.div {
+    margin-top: 32px;
+    margin-bottom: 152px;
+}
+
+
 .text,
 .text-team {
+
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--main-font-color);
 }
 
+
+
+
+/* стилі співпадають тому пишемо два класи разом через кому щоб
+не дублювати лишній код */
 .title-doing,
 .title-team {
+    padding-top: 120px;
+    margin-bottom: 72px;
     text-align: center;
     text-transform: capitalize;
     font-size: 36px;
     line-height: 1.11;
     letter-spacing: 0.02em;
     color: var(--secondory-font-color);
+
 }
 
-.section-team {
-    background-color: #F4F4FD
+
+
+.section-advantages {
+    background-color: var(--main-light-color);
+
+}
+
+.list-advantages {
+    display: flex;
+
+
+}
+
+/* .list-advantges .text:not(:last-child) {
+    margin-right: 40px;
+} */
+
+.section-whatdoing {
+    background-color: var(--main-light-color);
+}
+
+/* клас ul в секції what are doing */
+.list-whatdoing {
+    /* margin: 0 auto; */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 120px;
+}
+
+
+.list-whatdoing .item-whatdoing:not(:last-child) {
+    margin-right: 24px;
+}
+
+.list-ourteam .item-team:not(:last-child) {
+    margin-right: 24px;
+
+}
+
+
+.section-ourteam {
+    background-color: #F4F4FD;
+    margin: 0 auto;
+}
+
+/* це клас нашого ul в секції our tean */
+.list-ourteam {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    /* margin: 0; */
+
 }
 
 .item-team {
-    background-color: #FFFFFF
+    margin-bottom: 120px;
+    /* outline: 1px solid green; */
+    width: 264px;
+    height: 380px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    border-radius: 0px 0px 4px 4px;
+
 }
 
-.text-footer {
-    font-size: 16px;
-    line-height: 1.5;
-    color: var(--secondory-footer-color);
-}
 
 .footer {
     background-color: var(--secondory-font-color);
+}
 
+.footer-logo {
+    color: #f4f4fd;
+}
+
+.list-footer {
+    padding-top: 100px;
+    margin: 0;
+}
+
+.item-footer {
+    width: 264px;
+
+}
+
+
+.text-footer {
+    padding-top: 16px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--secondory-footer-color);
 }
