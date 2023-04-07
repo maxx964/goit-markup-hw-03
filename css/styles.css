@@ -210,16 +210,15 @@ img {
     випадку є (ul) це дає змогу не використовувати додаткові div*/
     font-style: normal;
     /* margin-left: auto; */
+    display: flex;
 }
 
 .list-address {
-    display: flex;
-
-}
-
-.item {
     margin-right: 40px;
+
 }
+
+
 
 
 .header-contact {
