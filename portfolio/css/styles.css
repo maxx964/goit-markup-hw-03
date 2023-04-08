@@ -85,14 +85,19 @@ img {
     align-items: center;
 }
 
+.nav-header {
+    display: flex;
+    align-items: center;
+}
+
 .list-nav {
     display: flex;
     /* gap: 40px; */
-    margin-right: auto;
+    margin-right: 231px;
 }
 
 .item-header {
-    margin-right: 40px;
+    margin-left: 40px;
 }
 
 
