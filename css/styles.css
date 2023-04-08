@@ -178,6 +178,10 @@ img {
     font-style: normal;
 }
 
+.address-contact {
+    margin-left: auto;
+}
+
 .list-nav-address {
     display: flex;
 
