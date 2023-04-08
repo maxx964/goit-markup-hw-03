@@ -43,18 +43,6 @@ p {
     margin: 0 auto;
 }
 
-/* .container-header {
-    display: flex;
-    align-items: center;
-} */
-
-
-
-.nav-header {
-    display: flex;
-    align-items: center;
-}
-
 /*  посиланням (a) добавлено значення щоб прибирати підкрєслювання яке встановлене
 за замовчуванням */
 .link {
@@ -96,9 +84,10 @@ img {
 
 }
 
-
-
-
+.container-header {
+    display: flex;
+    align-items: center;
+}
 
 
 .header-link {
@@ -131,19 +120,15 @@ img {
 
 .list-nav {
     display: flex;
-    align-items: center;
-    gap: 40px;
-
-
+    /* gap: 40px; */
+    margin-right: auto;
 }
 
 .item-header {
-    /* gap: 40px; */
+    margin-right: 40px;
 }
 
-.header-contact {
-    /* margin-right: 40px; */
-}
+
 
 
 .logotyp {
@@ -186,18 +171,18 @@ img {
     padding-bottom: 24px;
 }
 
-.address {
-    font-style: normal;
-    margin-left: 331px;
-
-}
-
 
 .list-nav-address {
     display: flex;
-    gap: 40px;
+    /* gap: 40px; */
+
+
+
 }
 
+.item-address {
+    margin-right: 40px;
+}
 
 
 .list-nav .header-contact {
