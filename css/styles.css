@@ -37,9 +37,8 @@ p {
     padding-left: 15px;
     padding-right: 15px;
     /* центрування блокових єлементів за допомогою автоматичного
-    марджину margin: 0 auto; який відносно розміру блока
-     задає йому відступи з ліва і права
-    тим самим центруючи його посередирі  */
+    марджину margin: 0 auto; який відносно розміру блоказадає йому відступи
+     з ліва і права тим самим центруючи його посередирі  */
     margin: 0 auto;
 }
 
@@ -171,13 +170,13 @@ img {
     padding-bottom: 24px;
 }
 
+.address {
+    font-style: normal;
+}
 
 .list-nav-address {
     display: flex;
     /* gap: 40px; */
-
-
-
 }
 
 .item-address {
@@ -185,7 +184,7 @@ img {
 }
 
 
-.list-nav .header-contact {
+.header-contact {
     font-family: 'Roboto';
     font-weight: 400;
     font-size: 16px;

@@ -72,16 +72,27 @@ img {
 .container {
     /* outline: 1px solid green; */
     width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
 }
 
 /* робимо класу уявний контейнер за допомогою  display: flex;
 потім  дітей в цьому контейнері(це а посилання-лого і ul список)
 ставимо в один рядок за допомогою  align-items: center; */
-.nav-header {
+.container-header {
     display: flex;
     align-items: center;
-    /* justify-content: space-evenly; */
+}
 
+.list-nav {
+    display: flex;
+    /* gap: 40px; */
+    margin-right: auto;
+}
+
+.item-header {
+    margin-right: 40px;
 }
 
 
@@ -90,15 +101,6 @@ img {
     color: var(--secondory-font-color);
 }
 
-.list-header {
-    display: flex;
-    gap: 40px;
-
-}
-
-.item {
-    margin-left: 40px;
-}
 
 .logotyp {
     font-family: "Raleway", sans-serif;
@@ -112,8 +114,8 @@ img {
     margin-right: 77px;
 }
 
-.header-item {
-    font-weight: 500;
+.item-header {
+    font-weight: 600;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -122,8 +124,8 @@ img {
     padding-bottom: 24px;
 }
 
-.header-item:hover,
-.header-item:focus {
+.item-header:hover,
+.item-header:focus {
     color: var(--active-color-hover);
 }
 
@@ -134,13 +136,16 @@ img {
 
 .address {
     font-style: normal;
-    margin-left: auto;
 }
 
-.list-address {
+.list-nav-address {
     display: flex;
+    /* gap: 40px; */
 }
 
+.item-address {
+    margin-right: 40px;
+}
 
 .header-contact {
     font-family: 'Roboto';
