@@ -123,15 +123,12 @@ img {
 
 .list-nav {
     display: flex;
-    /* gap: 40px; */
-    margin-right: 231px;
+
+
 }
 
-
-
-
 .item-header {
-    margin-left: 40px;
+    margin-right: 40px;
 }
 
 
