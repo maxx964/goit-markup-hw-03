@@ -212,12 +212,13 @@ img {
     color: var(--secondory-font-accent-color);
     cursor: pointer;
     border: 1px solid var(--accent-color-cornflower);
-    padding-top: 12px;
-    padding-bottom: 24px;
-    padding-left: 24px;
-    padding-right: 24px;
     border-radius: 4px;
 
+    /*короткий запис padding: 12px 24px */
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 .btn:hover,
@@ -230,16 +231,21 @@ img {
 .list-images {
     display: flex;
 
-    /* щоб обмежити розповзання наших картинок примвняємо flex-wrap: wrap; */
+    /* Для списку в класі заданий стиль flex-wrap: wrap;
+        для розповзання елементів списку на новий рядок якщо їм не вистачає місця в попередньому */
     flex-wrap: wrap;
 
-    row-gap: 34px;
+    /* Для списку в класі заданий стиль column-gap: 24px;
+   для визначення горизонтальних відступів між пунктами списку (можна використовувати margin-right: 24px для тега li у класі) */
+    row-gap: 48px;
     column-gap: 24px;
     margin: 0;
 }
 
+/* Для списку в класі заданий стиль width: calc((100% - 48px) / 3);
+для визначення ширини для елемента списку (від загальної ширини екрану віднімаємо суму відступів між пунктами
+ і ділимо це на кількість пунктів списку в одному рядку) */
 .item-images {
-    /* margin-bottom: 120px; */
     width: calc((100% - (24 * 2)) / 3);
     width: 360px;
     height: 420px;
@@ -248,17 +254,22 @@ img {
     background-color: var(--main-light-color);
     border: 0.5px solid #F4F4FD;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-
+    /* ці значення чомусь не спрацювали картинки зміщюються */
+    /* margin-right: 24px;
+    margin-bottom: 48px;
+    використав (row-gap: і column-gap:) для списку ul */
 
 }
 
 .div {
-    margin-top: 32px;
+    padding: 32px 16px;
+    border: 1px solid #e7e9fc;
 }
 
 
 
 .title-product {
+    margin-bottom: 8px;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
