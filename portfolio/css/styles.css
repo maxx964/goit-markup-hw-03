@@ -102,12 +102,11 @@ img {
     margin-right: 40px;
 }
 
-
-
-.header-logo {
-    color: var(--secondory-font-color);
+.header-link {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
-
 
 .logotyp {
     font-family: "Raleway", sans-serif;
