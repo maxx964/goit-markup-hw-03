@@ -27,6 +27,7 @@ p {
 }
 
 .header {
+    border-bottom: 1px solid #e7e9fc;
     background-color: var(--main-light-color);
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
@@ -94,6 +95,7 @@ img {
     display: flex;
     /* gap: 40px; */
 
+
 }
 
 .item-header {
@@ -116,7 +118,7 @@ img {
     letter-spacing: 0.03em;
     color: var(--secondory-font-accent-color);
     text-decoration: none;
-    margin-right: 77px;
+    margin-right: 76px;
 }
 
 .item-header {
@@ -145,14 +147,14 @@ img {
 
 .list-nav-address {
     display: flex;
-    /* gap: 40px; */
+
 }
 
 .item-address {
     margin-right: 40px;
 }
 
-.header-contact {
+*/ .header-contact {
     font-family: 'Roboto';
     font-weight: 400;
     font-size: 16px;
