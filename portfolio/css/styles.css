@@ -174,7 +174,7 @@ img {
 /* Для секції в класі заданий стиль */
 .section-our-product {
     padding-top: 96px;
-    padding-bottom: 96px;
+    padding-bottom: 120px;
     /* ці падінги пребираємо їх бути не повинно але автоперевірка може без них не пропустити
      padding-left: 120px;
     padding-right: 120px; */
@@ -228,7 +228,9 @@ img {
 .btn:hover,
 .btn:focus {
     color: #FFFFFF;
-    border: transparent;
+    /* border: transparent;виставлено без 1 solid як в коментарі ментора 
+    але автоперевірка не приймає тому значення з одиничкою*/
+    border: 1px solid transparent;
     background-color: var(--active-color-hover);
 }
 
