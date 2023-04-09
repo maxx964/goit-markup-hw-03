@@ -10,9 +10,8 @@
 body {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
-    color: #434455;
-    /* background-color: var(--main-light-color); */
-    /* background-color: yellowgreen; */
+    color: var(--main-light-color);
+    color: var(--main-font-color);
 }
 
 h1,
@@ -27,7 +26,6 @@ p {
 
 .header {
     border-bottom: 1px solid #e7e9fc;
-    background: #FFFFFF;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
@@ -58,7 +56,7 @@ p {
 .list {
     list-style: none;
     padding: 0;
-    margin: 0;
+    /* margin: 0; */
 }
 
 /* потрібне встановленя для скидання кусочка типу
@@ -123,13 +121,13 @@ img {
 
 .list-nav {
     display: flex;
-
+    gap: 40px;
 
 }
 
-.item-header {
+/* .item-header {
     margin-right: 40px;
-}
+} */
 
 
 
@@ -148,9 +146,9 @@ img {
 }
 
 
-.header-logo,
+/* .header-logo, */
 .header-link {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -184,18 +182,17 @@ img {
 
 .list-nav-address {
     display: flex;
+    gap: 40px;
 
 }
 
-.item-address {
+/* .item-address {
     margin-right: 40px;
 
-}
+} */
 
 
 .header-contact {
-    font-family: 'Roboto';
-    font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -203,9 +200,14 @@ img {
 }
 
 
+
 .section-hero {
     background-color: #2E2F42;
     text-align: center;
+
+    /* розмір секціям ми задаемо через padding якщо наприклад в секції є
+    заголовок то відступ в данному випадку рахуються зверху від заголовка 188px 
+    і від низу заголовка теж 188px */
     padding-top: 188px;
     padding-bottom: 188px;
 
@@ -220,12 +222,14 @@ img {
     line-height: 1.07;
     letter-spacing: 0.02em;
     color: var(--main-light-color);
-    /* outline: 1px solid yellow; */
     margin: 0 auto;
     padding-left: 0;
     padding-right: 0;
-    padding-top: 192px;
-    padding-bottom: 48px;
+    margin-bottom: 48px;
+    /* відступи між елементами робимо через (MARGIN)
+    в данному випадку це заголовок відступ у низ до кнопки
+     padding-top: 192px;
+    padding-bottom: 48px; */
 }
 
 button {
@@ -235,7 +239,6 @@ button {
     min-width: 170px;
     cursor: pointer;
     margin: auto;
-
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     padding: 16px 32px
@@ -273,7 +276,7 @@ button {
 }
 
 .subtitle-team {
-
+    font-weight: 600;
     margin-bottom: 8px;
     font-size: 20px;
     line-height: 1.2;
@@ -374,7 +377,7 @@ button {
 
     /* outline: 1px solid green; */
     width: 264px;
-    height: 380px;
+    /* height: 380px; висоту не задаємо*/
     background: #FFFFFF;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
@@ -387,7 +390,7 @@ button {
     padding-right: 16px;
     border-bottom-right-radius: 4px;
     border-bottom-left-radius: 4px;
-    outline: 1px solid red;
+
 
 }
 

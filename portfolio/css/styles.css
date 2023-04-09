@@ -28,7 +28,7 @@ p {
 
 .header {
     border-bottom: 1px solid #e7e9fc;
-    background-color: var(--main-light-color);
+    /* background-color: var(--main-light-color); */
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
@@ -43,13 +43,13 @@ p {
 .link {
     text-decoration: none;
     color: currentColor;
-    margin: 0;
+    /* margin: 0; */
 }
 
 .list {
     list-style: none;
     padding: 0;
-    margin: o;
+    margin: 0;
 }
 
 img {
@@ -70,20 +70,25 @@ img {
     position: absolute;
 }
 
-.container {
-    /* outline: 1px solid green; */
-    width: 1158px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: auto;
-}
-
 /* робимо класу уявний контейнер за допомогою  display: flex;
 потім  дітей в цьому контейнері(це а посилання-лого і ul список)
 ставимо в один рядок за допомогою  align-items: center; */
 .container-header {
     display: flex;
     align-items: center;
+}
+
+.header-link {
+    display: block;
+    /* елементам (а) добавлений падинг в гору та низ для кращого наведення мишкою
+    в режимі cursor таким чином 
+    ми одразу задаємо і потрібну висоту нашому header */
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.header-logo {
+    color: var(--secondory-font-color);
 }
 
 .nav-header {
@@ -93,14 +98,15 @@ img {
 
 .list-nav {
     display: flex;
-    /* gap: 40px; */
+    gap: 40px;
+
 
 
 }
 
-.item-header {
+/* .item-header {
     margin-right: 40px;
-}
+} */
 
 .header-link {
     display: block;
@@ -120,14 +126,12 @@ img {
     margin-right: 76px;
 }
 
-.item-header {
+.header-link {
     font-weight: 600;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--secondory-font-color);
-    padding-top: 24px;
-    padding-bottom: 24px;
 }
 
 .item-header:hover,
@@ -174,8 +178,9 @@ img {
 .section-our-product {
     padding-top: 96px;
     padding-bottom: 96px;
-    padding-left: 120px;
-    padding-right: 120px;
+    /* ці падінги пребираємо їх бути не повинно але автоперевірка може без них не пропустити
+     padding-left: 120px;
+    padding-right: 120px; */
 }
 
 /* Для списку в класі заданий стиль display: flex;
@@ -185,18 +190,20 @@ img {
 
 /* Для списку в класі можна задати стиль gap: 24px;
 для визначення відступів між пунктами списку а також 
-(можна використовувати margin-right: 24px для тега li у класі)*/
+(можна використовувати margin-right: 24px для тега li у класі,але потім 
+треба онулити крайні марджин за допомогою :not(:last-child))*/
 .list-button {
     display: flex;
     justify-content: center;
     margin-bottom: 72px;
+    gap: 24px;
 }
 
 /*
  в данному випадку використалі для li */
-.item-button {
+/* .item-button {
     margin-right: 24px;
-}
+} */
 
 
 
@@ -224,7 +231,7 @@ img {
 .btn:hover,
 .btn:focus {
     color: #FFFFFF;
-    border: 1px solid transparent;
+    border: transparent;
     background-color: var(--active-color-hover);
 }
 
@@ -246,11 +253,10 @@ img {
 для визначення ширини для елемента списку (від загальної ширини екрану віднімаємо суму відступів між пунктами
  і ділимо це на кількість пунктів списку в одному рядку) */
 .item-images {
-    width: calc((100% - (24 * 2)) / 3);
-    width: 360px;
-    height: 420px;
-    left: 924px;
-    top: 1224px;
+    width: calc((100% - 48px) / 3);
+
+    /* left: 924px;
+    top: 1224px; */
     background-color: var(--main-light-color);
     border: 0.5px solid #F4F4FD;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
