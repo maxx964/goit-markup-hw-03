@@ -4,6 +4,12 @@
     --secondory-font-color: #2E2F42;
     --secondory-footer-color: #F4F4FD;
     --secondory-font-accent-color: #4D5AE5;
+    --bgr-color-icon: #F4F4FD;
+    --btn-hero-color-hover: #404bbf;
+    --header-color-hover: #404bbf;
+    --light-slate: #8E8F99;
+    --green-color: #31D0AA;
+
 
 }
 
@@ -24,6 +30,10 @@ p {
     margin: 0;
 }
 
+use {
+    fill: currentColor;
+}
+
 .header {
     border-bottom: 1px solid #e7e9fc;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -40,33 +50,33 @@ p {
     margin: 0 auto;
 }
 
-/*  посиланням (a) добавлено значення щоб прибирати підкрєслювання яке встановлене
-за замовчуванням */
+
 .link {
     text-decoration: none;
+    /*  посиланням (a) добавлено значення щоб прибирати підкрєслювання яке встановлене
+    за замовчуванням */
 
+    color: currentColor;
     /* currentColor дає змогу унаслідовання кольорів шрифту 
     від встановленого в (body)
      перебиває значення кольору яке виставленно при зомовчувані браузером */
-    color: currentColor;
 }
 
 
-/* списку (ul) добавлено значення щоб прибирати крапки */
 .list {
     list-style: none;
     padding: 0;
-    /* margin: 0; */
+    margin: 0;
+    /* списку (ul) добавлено значення щоб прибирати крапки padding i margin */
 }
 
-/* потрібне встановленя для скидання кусочка типу
-пустого місця яке браузер встановлює за замовчуванням
-для зображень */
 img {
     display: block;
+    /* потрібне встановленя для скидання кусочка 
+    проміжка в 4px місця яке браузер встановлює за замовчуванням
+    щоб елементи не злипалися */
 }
 
-/* для приховання логічного зоголовка застосовуемо .visually-hidden */
 .visually-hidden {
     height: 1px;
     margin: -1px;
@@ -78,7 +88,7 @@ img {
     overflow: hidden;
     width: 1px;
     position: absolute;
-
+    /* для приховання логічного зоголовка застосовуемо .visually-hidden */
 }
 
 .container-header {
@@ -89,13 +99,14 @@ img {
 
 .header-link {
     display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
     /* елементам (а) добавлений падинг в гору та низ для кращого наведення мишкою
     в режимі cursor таким чином 
     ми одразу задаємо і потрібну висоту нашому header */
-    padding-top: 24px;
-    padding-bottom: 24px;
-
 }
+
+
 
 /* скидання крайньої геометрії тобто марджину за допомогою :not(:last-child) у останьої дити в списку у
 всіх що перед ним марджин залишається (!крайній марджин прибираємо ЗАВЖДИ!) */
@@ -105,13 +116,9 @@ img {
     margin-right: 40px; */
 
 
-
-
-
-
-/* логотипу добавленний селекто span з класом для стилізації частини тексту */
 .header-logo {
     color: var(--secondory-font-color);
+    /* логотипу добавленний селекто span з класом header-logo для стилізації частини тексту */
 }
 
 .nav-header {
@@ -146,7 +153,6 @@ img {
 }
 
 
-/* .header-logo, */
 .header-link {
     font-weight: 600;
     font-size: 16px;
@@ -157,23 +163,26 @@ img {
 
 .header-link:hover,
 .header-link:focus {
-    color: #404bbf;
+    color: var(--header-color-hover);
 }
 
 .header-contact:hover,
 .header-contact:focus {
-    color: #404bbf;
+    color: var(--header-color-hover);
 }
 
-/* добавлений падинг в горі та в низу елемента для кращого наведення мишкою 
-для режиму cursor */
+
 .header-contact {
     padding-top: 24px;
     padding-bottom: 24px;
+    /* добавлений падинг в горі та в низу елемента для кращого наведення мишкою 
+    для режиму cursor  */
 }
+
 
 .address {
     font-style: normal;
+    /* змінює у посилань (а) синій наклоний шрифт на стандартний вказаний */
 }
 
 .address-contact {
@@ -188,7 +197,6 @@ img {
 
 /* .item-address {
     margin-right: 40px;
-
 } */
 
 
@@ -202,16 +210,27 @@ img {
 
 
 .section-hero {
-    background-color: #2E2F42;
-    text-align: center;
+    /* background-color: #2E2F42; */
+    max-width: 1440px;
+    min-height: 603px;
+    margin-left: auto;
+    margin-right: auto;
 
-    /* розмір секціям ми задаемо через padding якщо наприклад в секції є
-    заголовок то відступ в данному випадку рахуються зверху від заголовка 188px 
-    і від низу заголовка теж 188px */
+    background-image: url(../css/bgr-img-hero/dark-bgr.png), url(../css/bgr-img-hero/bgr-hero.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-size: cover; */
+
+
+    text-align: center;
     padding-top: 188px;
     padding-bottom: 188px;
-
+    /* розмір секціям ми задаемо через padding якщо наприклад в секції є
+заголовок то відступ в данному випадку рахуються зверху від заголовка 188px 
+і від низу заголовка теж 188px */
 }
+
+
 
 
 .title-hero {
@@ -227,13 +246,15 @@ img {
     padding-right: 0;
     margin-bottom: 48px;
     /* відступи між елементами робимо через (MARGIN)
-    в данному випадку це заголовок відступ у низ до кнопки
-     padding-top: 192px;
-    padding-bottom: 48px; */
+    в данному випадку це заголовок відступ у низ до кнопки margin-bottom: 48px;*/
+
+    padding-bottom: 48px;
+    padding-top: 192px;
+
 }
 
+/* В СТРОЧНИХ ЄЛЕМЕНТІВ НЕМАЄ ПАРАМЕТРІВ ВЕРХНІХ НИЖНІХ МАРДЖЕНІВ */
 button {
-
     height: 56px;
     display: block;
     min-width: 170px;
@@ -252,7 +273,7 @@ button {
     font-size: 16px;
     line-height: 1.18;
     letter-spacing: 0.04em;
-    color: #ffffff;
+    color: var(--bgr-color-icon);
     background-color: #4D5AE5;
     border: none;
 
@@ -263,6 +284,7 @@ button {
 .btn-hero:hover,
 .btn-hero:focus {
     background-color: #404BBF;
+
 }
 
 
@@ -284,10 +306,16 @@ button {
     color: var(--secondory-font-color);
 }
 
+.text {
 
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--main-font-color);
+}
 
-.text,
 .text-team {
+    margin-bottom: 8px;
 
     font-size: 16px;
     line-height: 1.5;
@@ -298,11 +326,12 @@ button {
 
 
 
+
 /* стилі співпадають тому пишемо два класи разом через кому щоб
 не дублювати лишній код */
 .title-doing,
-.title-team {
-
+.title-team,
+.titel-customers {
     margin-bottom: 72px;
     text-align: center;
     text-transform: capitalize;
@@ -316,20 +345,61 @@ button {
 
 
 .section-advantages {
-    padding-top: 120px;
+    /* padding-top: 120px; */
     padding-bottom: 120px;
     background-color: var(--main-light-color);
 
 }
 
+
 .list-advantages {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    /* gap: 24px; */
+    margin-left: -24px;
 }
 
 .item-advantages {
-    width: calc((100% - 3 * 24px) / 4);
+    flex-basis: calc(100% / 4 - 24px);
+    margin-left: 24px;
+    /* width: calc((100% - 3 * 24px) / 4); */
 }
+
+.advantages-section {
+    padding: 24px 100px;
+    margin-bottom: 8px;
+
+    background: #F4F4FD;
+    width: 264px;
+    height: 112px;
+    border-radius: 4px;
+}
+
+/* .item-advantages::before {
+    margin-bottom: 8px;
+
+    display: block;
+    content: "";
+    height: 112px;
+    background: #F4F4FD;
+    background-image: url(../css/bgr-img-hero/antenna.png);
+    background-repeat: no-repeat;
+    /* background-size: contain;????????? */
+/* background-position: center; */
+/* border-radius: 4px; */
+/* }
+
+.item-punctuality::before {
+    background-image: url(../css/bgr-img-hero/clock.png);
+}
+
+.item-deligenc::before {
+    background-image: url(../css/bgr-img-hero/diagram.png);
+}
+
+.item-technologies::before {
+    background-image: url(../css/bgr-img-hero/astronaut.png)
+} */
 
 
 .section-whatdoing {
@@ -341,7 +411,7 @@ button {
 .list-whatdoing {
     gap: 24px;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 
 }
 
@@ -351,33 +421,27 @@ button {
 }
 
 
-.list-ourteam {
-    gap: 24px;
-}
-
-
 .section-ourteam {
     padding-top: 120px;
     padding-bottom: 120px;
 
     background-color: #F4F4FD;
     margin: 0 auto;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 /* це клас нашого ul в секції our tean */
 .list-ourteam {
     display: flex;
     text-align: center;
-    justify-content: space-between;
-    /* margin: 0; */
-
+    gap: 24px;
+    /* justify-content: space-between;можно і такий варіант
+    щоб розсунути колонки */
 }
 
 .item-team {
-
-    /* outline: 1px solid green; */
     width: 264px;
-    /* height: 380px; висоту не задаємо*/
+    /* height: 380px; висоту майже ніколи не задаємо*/
     background: #FFFFFF;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
@@ -390,9 +454,85 @@ button {
     padding-right: 16px;
     border-bottom-right-radius: 4px;
     border-bottom-left-radius: 4px;
-
-
 }
+
+.list-social {
+    display: flex;
+    gap: 24px;
+}
+
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #4D5AE5;
+    color: var(--main-light-color);
+}
+
+
+.section-customers {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    margin: 0 auto;
+}
+
+.customers {
+
+    /* padding: 16px 32px; */
+    /* width: 168px;
+    height: 88px; */
+    /* border: 1px solid #8E8F99; */
+    /* border-radius: 4px;
+    fill: #8E8F99; */
+    outline: 1px solid red;
+}
+
+/* 
+.customers:hover {
+    fill: #404BBF;
+    border: 1px solid#404BBF;
+} */
+
+
+
+.customers-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 24px; */
+    margin-left: -24px;
+}
+
+.customers-list>.item-customers {
+    flex-basis: calc(100% / 6 - 24px);
+    margin-left: 24px;
+}
+
+
+
+.customer-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 168px;
+    height: 88px;
+    padding: 16px 32px;
+    border: 1px solid #8E8F99;
+    border-radius: 4px;
+    color: var(--light-slate);
+}
+
+/* .icon-customers {
+    width: 41px;
+    height: 46.97px;
+} */
+
 
 
 .footer {
@@ -430,5 +570,47 @@ button {
     text-decoration: none;
     display: inline-block;
     margin-bottom: 16px;
+}
 
+
+
+
+.footer1 {
+    display: flex;
+}
+
+.footer3 {
+    margin-left: 120px;
+}
+
+.text-social-media {
+    margin-bottom: 16px;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+.list-footer-social {
+    display: flex;
+    gap: 16px;
+}
+
+
+.footer-social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #8E8F99;
+    color: var(--main-light-color);
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+    background-color: var(--green-color);
 }

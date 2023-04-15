@@ -7,6 +7,7 @@
     --active-color-hover: #404bbf;
     --background-color-btn: #F4F4FD;
     --accent-color-cornflower: #e7e9fc;
+    --green-color: #31D0AA;
 }
 
 body {
@@ -26,6 +27,11 @@ p {
     margin: 0;
 }
 
+
+use {
+    fill: currentColor;
+}
+
 .header {
     border-bottom: 1px solid #e7e9fc;
     /* background-color: var(--main-light-color); */
@@ -43,7 +49,6 @@ p {
 .link {
     text-decoration: none;
     color: currentColor;
-    /* margin: 0; */
 }
 
 .list {
@@ -70,10 +75,11 @@ img {
     position: absolute;
 }
 
-/* робимо класу уявний контейнер за допомогою  display: flex;
-потім  дітей в цьому контейнері(це а посилання-лого і ul список)
-ставимо в один рядок за допомогою  align-items: center; */
+
 .container-header {
+    /* робимо класу уявний контейнер за допомогою  display: flex;
+    потім  дітей в цьому контейнері(це а посилання-лого і ul список)
+    центруємо по осі(Y) align-items: center; */
     display: flex;
     align-items: center;
 }
@@ -101,9 +107,6 @@ img {
     gap: 40px;
 }
 
-/* .item-header {
-    margin: 0;
-} */
 
 .header-link {
     display: block;
@@ -184,7 +187,7 @@ img {
 /* Для списку в класі заданий стиль display: flex;
 для розміщення кнопок в одну лінію по горизонталі 
 Для списку в класі заданий стиль justify-content: center;
-для розміщення дочірніх елементів списку по центру */
+для розміщення дочірніх елементів списку по центру осі(х) */
 
 /* Для списку в класі можна задати стиль gap: 24px;
 для визначення відступів між пунктами списку а також 
@@ -197,13 +200,10 @@ img {
     gap: 24px;
 }
 
-/*
- в данному випадку використалі для li */
-/* .item-button {
-    margin-right: 24px;
-} */
-
-
+/* випадок використання для li */
+/*(ul li:not(:last-child)) 
+.list-button .item-button:not(:last-child) {
+    margin-right: 24px;} */
 
 
 .btn {
@@ -230,41 +230,48 @@ img {
 .btn:focus {
     color: #FFFFFF;
     /* border: transparent;виставлено без 1 solid як в коментарі ментора 
-    але автоперевірка не приймає тому значення з одиничкою*/
+    але автоперевірка не приймає тому значення з одиничкою залишаємо*/
     border: 1px solid transparent;
     background-color: var(--active-color-hover);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
+
+
 
 .list-images {
     display: flex;
-
-    /* Для списку в класі заданий стиль flex-wrap: wrap;
-        для розповзання елементів списку на новий рядок якщо їм не вистачає місця в попередньому */
     flex-wrap: wrap;
+    /* Для списку в класі заданий стиль flex-wrap: wrap;
+для розповзання елементів списку на новий рядок якщо їм не вистачає місця в попередньому */
 
-    /* Для списку в класі заданий стиль column-gap: 24px;
-   для визначення горизонтальних відступів між пунктами списку (можна використовувати margin-right: 24px для тега li у класі) */
-    row-gap: 48px;
     column-gap: 24px;
+    row-gap: 48px;
+
     margin: 0;
+    /* Для списку в класі заданий стиль column-gap: 24px;
+для визначення горизонтальних відступів між пунктами списку
+ (можна використовувати margin-right: 24px для тега li у класі) */
+
 }
 
-/* Для списку в класі заданий стиль width: calc((100% - 48px) / 3);
-для визначення ширини для елемента списку (від загальної ширини екрану віднімаємо суму відступів між пунктами
- і ділимо це на кількість пунктів списку в одному рядку) */
 .item-images {
     width: calc((100% - 48px) / 3);
+    /* Для списку в класі заданий стиль width: calc((100% - 48px) / 3);
+для визначення ширини для елемента списку (від загальної ширини екрану віднімаємо суму відступів між пунктами
+ і ділимо це на кількість пунктів списку в одному рядку) */
 
-    /* це не треба вказувати left: 924px;
-    top: 1224px; */
+    /* flex-basis:calc(100% /3 - 24px) ; при margin-left: 24px; margin-top: 24px;
+ як в прикладі чомусь не спрацювало */
+
     background-color: var(--main-light-color);
     border: 0.5px solid #F4F4FD;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-    /* ці значення чомусь не спрацювали картинки зміщюються */
-    /* margin-right: 24px;
-    margin-bottom: 48px;
-    використав (row-gap: і column-gap:) для списку ul */
+}
 
+.item-images:hover,
+.item-images:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .div-title-text {
@@ -309,8 +316,6 @@ img {
     margin: 0;
 }
 
-
-
 .text-footer {
     max-width: 264px;
     font-size: 16px;
@@ -329,5 +334,44 @@ img {
     text-decoration: none;
     display: inline-block;
     margin-bottom: 16px;
+}
 
+.footer-1 {
+    display: flex;
+}
+
+.footer-3 {
+    margin-left: 120px;
+}
+
+
+.text-social-media {
+    margin-bottom: 16px;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+.list-footer-social {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #8E8F99;
+    color: var(--main-light-color);
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+    background-color: var(--green-color);
 }
