@@ -357,6 +357,7 @@ button {
     flex-wrap: wrap;
     /* gap: 24px; */
     margin-left: -24px;
+
 }
 
 .item-advantages {
@@ -365,13 +366,11 @@ button {
     /* width: calc((100% - 3 * 24px) / 4); */
 }
 
-.advantages-section {
-    padding: 24px 100px;
-    margin-bottom: 8px;
-
+.icon-advantages {
+    text-align: center;
+    background-size: 264px;
     background: #F4F4FD;
-    width: 264px;
-    height: 112px;
+    padding: 24px 100px;
     border-radius: 4px;
 }
 
@@ -575,11 +574,11 @@ button {
 
 
 
-.footer1 {
+.footer-container {
     display: flex;
 }
 
-.footer3 {
+.footer-container-right {
     margin-left: 120px;
 }
 

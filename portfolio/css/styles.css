@@ -336,11 +336,11 @@ img {
     margin-bottom: 16px;
 }
 
-.footer-1 {
+.footer-container {
     display: flex;
 }
 
-.footer-3 {
+.footer-container-right {
     margin-left: 120px;
 }
 
